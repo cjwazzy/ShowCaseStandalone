@@ -1,0 +1,209 @@
+# ShowCaseStandalong Configuration.
+# The first line of the explanation, are the default settings.
+# ---------
+# DefaultUnit: 64
+# Default Unit is the number of items a player will transact with, if they
+# use sneak-right click.
+# ---------
+# UndoTime: 120
+# UndoTime defines the amount of time, in seconds, that a transaction will be undo-able.
+# Warning: making this to long may result in problem for players.
+# ---------
+# EconomySystem: AUTO
+# EconomySystem is which economic plugin to use. Value can be: 
+# AUTO, iConomy, EssentialsEconomy, BOSEconomy, Vault
+# ---------
+# CreatePrice:
+#   BuyShop: 0.0
+#   SellShop: 0.0
+#   Display: 0.0
+# CreatePrice defines how much money a player should be charged for creating a showcase.
+# ---------
+# AllowUnsafeEnchantments: false
+# AllowUnsafeEnchantments specifies whether SCS should load enchantments not found in Vanilla MC.
+# Warning, this may create impossible items, that end up crashing clients.
+# ---------
+# CancelExplosion: false
+# CancelExplosion gives you the choice of what to do if a creeper or TNT explodes, 
+# destroying the shop.  If set to true, the explosion is canceled. If set to false,
+# the shop will be deleted.
+# ---------
+# HideInactiveShops: false
+# HideInactiveShops will not display any item in shops that are either full (buy) 
+# or empty (sell).
+# ---------
+# LogTransactions: false
+# LogTransactions will determine if SCS logs all shop transactions for later auditing.
+# ---------
+# WorldBlacklist:
+# - world_nether
+# WorldBlacklist determines which worlds, if any, are not allowed to have SCS shops on them.
+# This is a YAML list.
+# ---------
+# Database:
+#   Type: MiniDB
+# Database determines where the shop files are stored. 
+# Type should be 'MiniDB' or 'sql'.  If 'sql' then fill in the rest of the settings
+# SQL not yet implemented.
+# ---------
+# Save:
+#   Delayed: false
+#   Interval: 60
+# If delayed save is set to true, then saves to the database/mini file happen at periodic 
+# intervals instead of after each transaction.  Interval defines how long that interval is,
+# in seconds.
+# ---------
+# Debug:
+#   Thread: false
+#   Interact: false
+#   Permissions: false
+#   ShowExtraMessages: false
+#   Save: false
+# Do not mess with this unless you know what you're doing.  You can quickly fill 
+# your harddrive with massive files and lag your server.
+# ---------
+# Localization: locale_EN.yml
+# Specifies the locale file to use for all messages the plugin sends.  locale_EN.yml
+# and locale_DE.yml are provided by default.  locale_EN will be used if the chosen 
+# locale file can not be found.  Both will be overwritten when the plugin updates, 
+# so if you want a custom locale file, copy one of them to a new name and specify its
+# filename here.
+# ---------
+# BlockList:
+#   Blacklist: true
+#   Blocks: [too long to list here]
+# BlockList determines which blocks can/can't be used as a showcase.  Note:  
+# These only apply to the block that will be the showcase, not what can be 
+# bought/sold in a showcase.
+#   Blacklist: true = use the list for forbidden blocks, 
+#              false = makes it a whitelist, i.e., allows only those blocks 
+#                      listed to be used to create a showcase.
+#   Blocks: a YML list of blocks to be used as a blacklist/whitelist.  Use bukkit
+#           standard names or id:data (e.g. orange wool = 35:1)
+# ---------
+# BuyItemList:
+#   Blacklist: true
+#   Blocks: []
+# BuyItemList determines which items can/can't be used as a buy showcase.
+#   Blacklist: true = use the list for forbidden items, 
+#              false = makes it a whitelist, i.e., allow only these items to be sold
+#   Blocks: a YML list of blocks to be used as a blacklist/whitelist. Use bukkit
+#           standard names or id:data (e.g. orange wool = 35:1)
+# ---------
+# SellItemList:
+#   Blacklist: true
+#   Blocks: []
+# SellItemList determines which items can/can't be used as a sell showcase.  Note:  
+#   Blacklist: true = use the list for forbidden blocks, 
+#              false = makes it a whitelist, i.e., allows only those blocks 
+#                      listed to be used to create a showcase.
+#   Blocks: a YML list of blocks to be used as a blacklist/whitelist. Use bukkit
+#           standard names or id:data (e.g. orange wool = 35:1).
+
+DefaultUnit: 64
+UndoTime: 120
+EconomySystem: AUTO
+CreatePrice:
+  BuyShop: 0.0
+  SellShop: 0.0
+  Display: 0.0
+AllowUnsafeEnchantments: false
+CancelExplosion: false
+HideInactiveShops: false
+LogTransactions: false
+RequireObjectToDisplay: false
+WorldBlacklist:
+- world_nether
+Database:
+  Type: MiniDB
+Save:
+  Delayed: true
+  Interval: 60
+Debug:
+  Thread: false
+  Interact: false
+  Permissions: false
+  Chunk: false
+  Save: false
+  ShowExtraMessages: false
+Localization:
+  File: locale_EN.yml
+  Version: 1.0
+BlockList:
+  Blacklist: true
+  Blocks:
+  - AIR
+  - BED
+  - BROWN_MUSHROOM
+  - BURNING_FURNACE
+  - CACTUS
+  - CAKE_BLOCK
+  - CHEST
+  - CROPS
+  - DEAD_BUSH
+  - DETECTOR_RAIL 
+  - DIODE_BLOCK_OFF
+  - DIODE_BLOCK_ON
+  - DISPENSER
+  - FENCE_GATE
+  - FIRE
+  - FURNACE
+  - GLASS
+  - IRON_DOOR_BLOCK
+  - JUKEBOX
+  - LADDER
+  - LAVA
+  - LEAVES
+  - LEVER
+  - LONG_GRASS
+  - MELON_STEM
+  - MOB_SPAWNER
+  - NOTE_BLOCK
+  - PISTON_BASE
+  - PISTON_EXTENSION
+  - PISTON_MOVING_PIECE
+  - PISTON_STICKY_BASE 
+  - POWERED_RAIL
+  - PUMPKIN_STEM
+  - RAILS
+  - RED_MUSHROOM
+  - RED_ROSE
+  - REDSTONE_TORCH_OFF
+  - REDSTONE_TORCH_ON
+  - REDSTONE_WIRE
+  - SAPLING
+  - SIGN
+  - SNOW
+  - STATIONARY_LAVA
+  - STATIONARY_WATER
+  - STONE_BUTTON
+  - STONE_PLATE
+  - TNT
+  - TORCH
+  - TRAP_DOOR
+  - VINE
+  - WATER
+  - WEB
+  - WOOD_PLATE
+  - WOODEN_DOOR
+  - WORKBENCH
+  - YELLOW_FLOWER
+  - WATER_LILY
+  - MONSTER_EGGS
+  - HUGE_MUSHROOM_1
+  - HUGE_MUSHROOM_2
+  - NETHER_FENCE
+  - NETHER_WARTS
+  - ENCHANTMENT_TABLE
+  - BREWING_STAND
+  - CAULDRON
+  - ENDER_PORTAL
+  - ENDER_PORTAL_FRAME
+  - ENDER_STONE
+  - DRAGON_EGG
+BuyItemList:
+  Blacklist: true
+  Items: []
+SellItemList:
+  Blacklist: true
+  Items: []
