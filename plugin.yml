@@ -1,6 +1,6 @@
 name: ShowCaseStandalone
 main: com.miykeal.showCaseStandalone.ShowCaseStandalone
-version: 0.79
+version: 0.80
 authors: [kellerkindt, sorklin, bitfreeze]
 softdepend:
   - MyWorlds

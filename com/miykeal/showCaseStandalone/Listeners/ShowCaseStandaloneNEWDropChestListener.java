@@ -2,7 +2,7 @@ package com.miykeal.showCaseStandalone.Listeners;
 
 //This is for a fork of the DC plugin (that hadn't been updated.
 import com.miykeal.showCaseStandalone.ShowCaseStandalone;
-import com.noheroes.dropchest.api.DropChestSuckEvent;
+import com.noheroes.dropchestnh.events.DropChestSuckEvent;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 
@@ -29,7 +29,7 @@ public class ShowCaseStandaloneNEWDropChestListener implements Listener {
     
     public ShowCaseStandaloneNEWDropChestListener(ShowCaseStandalone instance){
         this.scs = instance;
-        scs.getServer().getPluginManager().registerEvents(this, scs);
+        scs.getServer().getPluginManager().registerEvents(this, ShowCaseStandalone.get());
     }
 
     @EventHandler(ignoreCancelled=true)

@@ -40,7 +40,7 @@ public class Properties {
 	/*
 	 * Build information
 	 */
-	public static final double 	build				= 79;
+	public static final double 	build				= 80;
 	public static final String 	buildAuthor			= "kellerkindt";
 	public static final String  buildContributor	= "sorklin, bitfreeze";
 	public static final String 	buildDate 			= "2012-04-10";

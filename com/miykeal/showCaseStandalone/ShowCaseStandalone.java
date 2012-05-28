@@ -216,7 +216,7 @@ public class ShowCaseStandalone extends JavaPlugin {
             }
             
             //This supports a fork that was done to upgrade DC to 1.1. 
-            if (cName.equalsIgnoreCase("com.noheroes.dropchest.dropchest")){
+            if (cName.equalsIgnoreCase("com.noheroes.dropchestnh.dropchestnh")){
             	log(Level.INFO, "Found New DropChest.  Attempting to hook api.");
             	try{ 
             		dropChestListener = new ShowCaseStandaloneNEWDropChestListener(this);
